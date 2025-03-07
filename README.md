@@ -1,4 +1,4 @@
-# Login/Register System with User and Admin Interaction in Reactjs
+# Login/Register System with User and Admin Interaction in Reactjs / Firebase
 
 This is a **Login/Register System** project that features user and admin interactions. It includes functionalities such as:
 
