@@ -14,10 +14,12 @@ This is a **Login/Register System** project that features user and admin interac
 - Users can create an account and log in securely.
 - User credentials are stored in a MySQL database.
 - Passwords are hashed and stored securely using JWT for authentication.
+- ToKen
 
 ### 2. **Admin Login with Two-Way Authentication**
 - Admins can log in with an added layer of security via two-way authentication.
 - This feature ensures that only authorized personnel can access the admin panel.
+- ToKen
 
 ### 3. **OTP Code for Forgot Password**
 - Users can request an OTP (One-Time Password) to reset their password.
