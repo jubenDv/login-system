@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# Login/Register System with User and Admin Interaction
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a **Login/Register System** project that features user and admin interactions. It includes functionalities such as:
 
-## Available Scripts
+- **User Registration and Login**
+- **Admin Login with Two-Way Authentication**
+- **OTP for Forgot Password**
+- **CAPTCHA Verification for User Login**
+- **Admin Control Over User Accounts (Activate/Deactivate)**
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+### 1. **User Registration and Login**
+- Users can create an account and log in securely.
+- User credentials are stored in a MySQL database.
+- Passwords are hashed and stored securely using JWT for authentication.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 2. **Admin Login with Two-Way Authentication**
+- Admins can log in with an added layer of security via two-way authentication.
+- This feature ensures that only authorized personnel can access the admin panel.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 3. **OTP Code for Forgot Password**
+- Users can request an OTP (One-Time Password) to reset their password.
+- OTP is sent to the user's registered email address using **Nodemailer**.
 
-### `npm test`
+### 4. **CAPTCHA Verification**
+- CAPTCHA is integrated into the login page to prevent automated bot attacks and ensure human-only logins.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 5. **Admin Control Over User Accounts (Activate/Deactivate)**
+- Admins have the ability to **activate** or **deactivate** user accounts.
+- Deactivated accounts will be unable to log in until reactivated by an admin.
 
-### `npm run build`
+## Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Frontend**: React
+- **Backend**: Node.js, Express.js
+- **Database**: MySQL
+- **Authentication**: JWT (JSON Web Token)
+- **Email Service**: Nodemailer
+- **CAPTCHA**: Google reCAPTCHA
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+- Node.js installed
+- MySQL installed
+- Git installed
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 1. Clone the Repository
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/jubenDv/login-system.git
+cd login-system
+2. Install Dependencies
+bash
+Copy
+Edit
+npm install
+3. Set Up MySQL Database
+Create a MySQL database and configure your .env file with the database connection details:
+env
+Copy
+Edit
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=your-password
+DB_NAME=your-database-name
+4. Start the Server
+bash
+Copy
+Edit
+npm start
+The server will start on http://localhost:5000. You can access the login and registration features at this address.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+How to Use
+Register as a User: Go to the registration page and create a new account with your email and password.
+Login as a User: Once registered, log in with your credentials.
+Forgot Password: If you forget your password, you can request an OTP to reset it.
+Admin Login: Admins can log in with their credentials and manage users. The admin login page includes a second layer of authentication for added security.
+CAPTCHA Verification: Every login attempt will be verified with CAPTCHA to prevent bots.
+Admin User Management: Admins can activate or deactivate user accounts from the admin panel. Deactivated accounts will not be able to log in until reactivated by the admin.
+Admin Controls
+Activate User Account: Admin can enable a previously deactivated account, allowing the user to log in again.
+Deactivate User Account: Admin can disable a user account, preventing them from logging in until the account is reactivated.
+Contributing
+Feel free to fork the repository, make changes, and submit a pull request. Contributions are welcome!
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+License
+This project is licensed under the MIT License.
