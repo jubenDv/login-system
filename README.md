@@ -3,6 +3,7 @@
 This is a **Login/Register System** project that features user and admin interactions. It includes functionalities such as:
 
 - **User Registration and Login**
+- **Landing page for both admin and user**
 - **Siempre ToKen**
 - **Admin Login with Two-Way Authentication**
 - **OTP for Forgot Password**
